@@ -1,2 +1,2 @@
 # pic-gen
-An image generator app
+An image generator web app
