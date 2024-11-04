@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header section with title and description -->
+        <header>
+            <h1>Image Generator</h1>
+            <p>Enter a word or phrase to find beautiful images from Unsplash</p>
+        </header>
+
+        <!-- Input field and button for generating images -->
+        <div class="search-container">
+            <div class="input-wrapper">
+                <input 
+                    type="text" 
+                    id="promptInput" 
+                    placeholder="Enter a prompt (e.g., 'sunset over mountains')"
+                >
+                <button id="generateBtn" onclick="generateImages()">
+                    <span>Generate</span>
+                    <div class="loader" id="loader"></div>
+                </button>
+            </div>
+            <p id="error" class="error"></p>
+        </div>
+
+        <!-- Area where generated images will appear -->
+        <div id="imageGrid" class="image-grid"></div>
+
+        <!-- Message shown before any images are generated -->
+        <div id="emptyState" class="empty-state">
+            <p>Enter a prompt and click "Generate" to see images</p>
+        </div>
+    </div>
+
+    <!-- Link to JavaScript file -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

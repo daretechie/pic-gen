@@ -1,0 +1,190 @@
+/* Basic reset to make elements look consistent */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General page style */
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  background-color: #f5f5f5;
+  line-height: 1.6;
+}
+
+/* Main container to center content */
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Header section */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #666;
+}
+
+/* Search box and button container */
+.search-container {
+  margin-bottom: 20px;
+}
+
+.input-wrapper {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+input {
+  width: 70%;
+  height: 50px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+}
+
+input:focus {
+  border-color: #4299e1;
+}
+
+/* Button style */
+button {
+  padding: 10px 20px;
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #3182ce;
+}
+
+button:disabled {
+  background-color: #a0aec0;
+  cursor: not-allowed;
+}
+
+/* Error message style */
+.error {
+  color: red;
+  font-size: 0.875rem;
+  text-align: center;
+  margin-top: 5px;
+}
+
+/* Grid layout for images */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Style for each image card */
+.image-card {
+  position: relative;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.image-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+/* Overlay for showing info on hover */
+.image-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.image-card:hover .image-overlay {
+  opacity: 1;
+}
+
+/* Style for photographer name */
+.photographer {
+  font-size: 0.875rem;
+}
+
+.photographer a {
+  color: white;
+  text-decoration: underline;
+}
+
+/* Download button inside overlay */
+.download-btn {
+  background-color: #4299e1;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 0.875rem;
+}
+
+/* Empty state for when no images are displayed */
+.empty-state {
+  text-align: center;
+  padding: 30px;
+  color: #666;
+}
+
+/* Loader animation */
+.loader {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ffffff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+.loading .button-text {
+  display: none;
+}
+
+.loading .loader {
+  display: block;
+}
