@@ -53,12 +53,6 @@ function displayImages(images) {
         <div class="image-card">
             <img src="${image.url}" alt="${promptInput.value}">
             <div class="image-overlay">
-                <div class="photographer">
-                    Photo by 
-                    <a href="${image.photographer_url}" target="_blank">
-                        ${image.photographer}
-                    </a>
-                </div>
                 <a href="${image.download_url}" 
                    class="download-btn" 
                    target="_blank">

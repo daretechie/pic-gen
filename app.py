@@ -38,14 +38,14 @@ def generate_images():
         if response.status_code != 200:
             return jsonify({'error': 'Failed to fetch images'}), response.status_code
 
-        # Process the images received from Unsplash API
+        # Process the images received from the API
         images = []
         for img in response.json():
             images.append({
                 'url': img['urls']['regular'],           # Image URL
                 'download_url': img['links']['download'], # Direct download link
-                'photographer': img['user']['name'],      # Photographer's name
-                'photographer_url': img['user']['links']['html'] # Photographer's profile link
+                # 'photographer': img['user']['name'],      # Photographer's name
+                # 'photographer_url': img['user']['links']['html'] # Photographer's profile link
             })
 
         return jsonify({'images': images})

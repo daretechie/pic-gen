@@ -135,16 +135,6 @@ button:disabled {
   opacity: 1;
 }
 
-/* Style for photographer name */
-.photographer {
-  font-size: 0.875rem;
-}
-
-.photographer a {
-  color: white;
-  text-decoration: underline;
-}
-
 /* Download button inside overlay */
 .download-btn {
   background-color: #4299e1;
